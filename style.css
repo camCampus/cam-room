@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Indie Flower", cursive;
+  font-size: 10px;
+  color: var(--color-text);
+}
+
+h1,
+section,
+p,
+span,
+svg {
+  transition: background-color 0.5s, color 0.5s ;
+}
+svg {
+  transform: scale(0.8);
+}
+:root {
+  /* Light theme variables */
+
+  --color-text-light: #1c1c1c;
+  --color-background-light: #fbeeff;
+  --color-violet-light: #d88ef5;
+
+  /* Dark theme */
+  --color-text-dark: #f3f1eb;
+  --color-background-dark: #5b6df5;
+}
+
+.light-theme {
+  --color-text: var(--color-text-light);
+  --color-background: var(--color-background-light);
+  --color-violet: var(--color-violet-light);
+}
+
+.dark-theme {
+  --color-text: var(--color-text-dark);
+  --color-background: var(--color-background-dark);
+  --color-violet: var(--color-text-light);
+}
+/* Experience ----------------------------------------------------------*/
+.experience {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+.experience-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Page ----------------------------------------------------------*/
+.page {
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-wrapper {
+  position: relative;
+}
+/* Toggle bar ----------------------------------------------------------*/
+.toggle-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 48px;
+  right: 48px;
+  z-index: 99999999999999999;
+}
+
+.sun-wrapper,
+.moon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button {
+  cursor: pointer;
+  position: relative;
+  width: 56px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-violet);
+  border-radius: 999px;
+  margin: 0px 16px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.toggle-circle {
+  position: absolute;
+  left: 6px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-background);
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-button:hover .toggle-circle {
+  transform: scale(0.8);
+}
+
+.slide {
+  left: 28px;
+}
+/* Section ----------------------------------------------------------*/
+.section-margin {
+  height: 3000px;
+  width: 100%;
+}
+
+.section {
+  width: 50%;
+  padding: 1000px 4%;
+  margin: 0;
+  background-color: var(--color-background);
+}
+
+.left {
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.section-intro-wrapper {
+  position: relative;
+  padding: 20% 5%;
+  border-bottom: 2px solid var(--color-violet);
+}
+
+.section-heading,
+.section-number {
+  font-size: calc(10px + 2rem);
+}
+
+.section-text {
+  font-size: calc(10px + 1rem);
+}
+
+.section-title-text {
+  font-size: calc(10px + 4rem);
+}
+/* Hero section ----------------------------------------------------------*/
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero-wrapper {
+  position: relative;
+  height: 100%;
+  width: calc(100% - 160px);
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.hero-main {
+  position: absolute;
+  top: calc(30% - 150px);
+  left: 0;
+}
+
+.hero-second {
+  position: absolute;
+  bottom: 150px;
+  right: 0;
+}
+
+.hero-main-title,
+.hero-second-subheading {
+  font-size: calc(20px + 4rem);
+}
+
+.hero-main-description {
+  font-size: calc(10px + 1.5rem);
+}
+
+
+/* Media Queries */
+
+@media (max-width: 968px){
+  .section{
+    width: 100%;
+  }
+}
